@@ -1,0 +1,124 @@
+/* Navbar General Styles */
+.navbar {
+    background-color: #ffffff; /* Clean white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem 0; /* Consistent vertical padding */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue-gray for contrast */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #3498db; /* Light blue on hover */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Limits width for larger screens */
+}
+
+/* Navbar Toggler (Hamburger Menu) */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(44, 62, 80, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom dark icon */
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #2c3e50; /* Dark blue-gray */
+    font-weight: 500;
+    padding: 0.5rem 1rem; /* Consistent spacing */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db; /* Light blue on hover */
+    background-color: rgba(52, 152, 219, 0.1); /* Subtle background highlight */
+}
+
+/* Active Nav Item */
+.nav-item.active .nav-link {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Search Form */
+.d-flex {
+    margin: 0.5rem 0; /* Vertical spacing */
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 20px; /* Rounded input */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+.btn-outline-success {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    color: #28a745;
+    border-color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Sign Out Button */
+.btn-link.nav-link {
+    color: #e74c3c; /* Red for sign out */
+    padding: 0.5rem 1rem;
+}
+
+.btn-link.nav-link:hover {
+    color: #c0392b;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #ffffff; /* White background for mobile menu */
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem; /* More spacing in mobile view */
+    }
+
+    .d-flex {
+        margin: 1rem 0; /* More spacing for search form */
+    }
+}
+
+/* Fixed Top Adjustments */
+.fixed-top {
+    z-index: 1030; /* Ensure it stays above other content */
+}
+
+/* User Welcome Text */
+.navbar-nav .nav-link span {
+    color: #7f8c8d; /* Gray for welcome text */
+    font-weight: 400;
+}

@@ -1,0 +1,78 @@
+<!-- app/views/home/index.html.erb -->
+<!-- Hero Section -->
+<div class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+  </div>
+</div>
+
+<!-- Additional Main Content -->
+<main class="container my-5">
+  <div class="container text-center my-5">
+    <h1 class="display-1 fw-bolder text-primary mb-4">Welcome to Basecamp Two</h1>
+    <% if user_signed_in? %>
+      <%= link_to "Projects", projects_path, class: "btn btn-success btn-lg" %>
+    <% else %>
+      <%= link_to "Get Started", new_user_registration_path, class: "btn btn-success btn-lg" %>
+    <% end %>
+    <h2 class="display-4 fw-bold text-muted mb-4">The wrong fit ends in frustration. The right fit sets you free.</h2>
+    <p class="lead mb-4">
+      Asana, Slack, Monday, and ClickUp make project management tools for big, boring, conforming companies. Just like them. <br />
+      We build Basecamp for smaller, hungrier, independent companies. Like yours — and ours. Discover what a great fit feels like. <br />
+      How does Basecamp work?
+    </p>
+    <h2 class="display-4 fw-bold text-muted mb-4">Refreshingly no-nonsense.</h2>
+    <p class="lead mb-4">
+      Most project management systems are either overkill, inadequate, or frustratingly chaotic. Teams struggle to adopt them, <br/>
+      information scatters everywhere, and complexity trips people up. It’s especially tough on small and medium-sized businesses. <br/>
+      Luckily there’s Basecamp. For 20 years and running, it’s hit the sweet spot. Check out all the stuff people tried <br/>
+      before finding the perfect fit in Basecamp.
+    </p>
+  </div>
+</main>
+
+<div class="container">
+  <div class="text-center">
+    <h2 class="display-4 fw-bold text-muted mb-4">Let’s take a look.</h2>
+    <p class="lead mb-4">
+      10 seconds after you sign up, clarity sets in.
+      The home screen organizes your projects, assignments, and upcoming events together on one screen. It’s your calm, comfortable, simple starting point every morning.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <img src="https://i.im.ge/2024/12/31/zZN4ec.maddi-bazzocco-waNAJOI7Jz8-unsplash.jpeg" class="img-fluid rounded" alt="Calendar">
+    </div>
+    <div class="col-lg-4">
+      <img src="https://i.im.ge/2024/12/31/zZPrrS.estee-janssens-aQfhbxailCs-unsplash.jpeg" class="img-fluid rounded" alt="Checklist">
+    </div>
+    <div class="col-lg-4">
+      <img src="https://i.im.ge/2024/12/31/zZy6iW.matilda-alloway-21mUU21Z20Q-unsplash.jpeg" class="img-fluid rounded" alt="Calculation">
+    </div>
+  </div>
+</div>
+<br/>
+
+<div class="container">
+  <div class="text-center">
+    <h2 class="display-4 fw-bold text-muted mb-4">Projects get teams — and keep teams — organized.</h2>
+    <p class="lead mb-4">
+      A project is where the tasks, discussions, deliverables, and decisions happen. Projects hold <br/>
+      everything — and everyone — together in one tidy, predictably structured place.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="https://i.im.ge/2024/12/31/zZyNc0.stephen-phillips-hostreviews-co-uk-shr-Xn8S8QU-unsplash.jpeg" class="img-fluid rounded" alt="Project1">
+    </div>
+    <div class="col-lg-6">
+      <img src="https://i.im.ge/2024/12/31/zZyy7c.kobu-agency-uLIJ9-nFqrE-unsplash.jpeg" class="img-fluid rounded" alt="Project2">
+    </div>
+  </div>
+</div>

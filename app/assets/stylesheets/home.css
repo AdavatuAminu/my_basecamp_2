@@ -1,0 +1,103 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Default background for scrolled content */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Hero Section */
+.hero {
+  position: relative; /* Relative so it flows with the page */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background: url('/assets/Career-in-Project-Management.jpg') no-repeat;
+  background-size: cover; /* Covers area without distortion */
+  background-position: center center; /* Centers image */
+  /* Removed background-attachment: fixed to keep background tied to hero only */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 0; /* Behind content */
+}
+
+/* Overlay for better readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slightly lighter overlay */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px; /* Wider for modern spacing */
+  padding: 20px;
+}
+
+/* Hero Text */
+.hero h1 {
+  font-size: 3.5rem; /* Responsive size */
+  margin-bottom: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem; /* Larger for readability */
+  margin-bottom: 30px;
+}
+
+/* Bootstrap Button Overrides (optional) */
+.btn-primary {
+  background-color: #3498db; /* Custom blue */
+  border-color: #3498db;
+  padding: 12px 25px;
+  font-size: 1.25rem;
+  transition: opacity 0.3s ease;
+}
+
+.btn-success {
+  background-color: #28a745; /* Custom green */
+  border-color: #28a745;
+  padding: 12px 25px;
+  font-size: 1.25rem;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover, .btn-success:hover {
+  opacity: 0.8;
+}
+
+/* Main Content (for scrolling sections below hero) */
+main {
+  position: relative;
+  z-index: 1; /* Above hero background */
+  background-color: #f8f9fa; /* Solid background after hero */
+  padding-top: 2rem; /* Space from hero */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn-primary, .btn-success {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

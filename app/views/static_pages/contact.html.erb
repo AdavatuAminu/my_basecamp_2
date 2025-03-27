@@ -1,0 +1,37 @@
+<!-- app/views/contacts/new.html.erb -->
+<!-- Hero Section -->
+<div class="contact-hero">
+  <div class="overlay"></div>
+  <div class="contact-content">
+    <h1>For More Enquiry Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+  </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="contact-section">
+  <h2>Send Us a Message</h2>
+
+  <%= form_with url: contact_path, method: :post, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :name, "Your Name" %>
+      <%= f.text_field :name, required: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email, "Your Email" %>
+      <%= f.email_field :email, required: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :message, "Your Message" %>
+      <%= f.text_area :message, rows: 4, required: true, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Send Message", class: "btn btn-submit" %>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <p class="success-message"><%= flash[:notice] %></p>
+  <% end %>
+</div>
