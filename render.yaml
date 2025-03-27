@@ -1,4 +1,4 @@
-# render.yaml
+# Final render.yaml for Git
 services:
   - type: web
     name: my_basecamp_2
@@ -8,7 +8,7 @@ services:
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: RAILS_MASTER_KEY
-        value: <your-master-key>
+        sync: false # Set in dashboard
       - key: RAILS_ENV
         value: production
       - key: RAILS_SERVE_STATIC_FILES
@@ -18,7 +18,7 @@ services:
           name: my_basecamp_db
           property: connectionString
       - key: SMTP_PASSWORD
-        value: aliyuaminu3369@gmail.com
+        sync: false # Set in dashboard
     preBuild:
       - apt-get update -y
       - apt-get install -y nodejs
