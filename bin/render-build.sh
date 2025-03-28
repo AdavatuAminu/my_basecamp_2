@@ -2,7 +2,14 @@
 # bin/render-build.sh
 set -o errexit
 
-# Install gems
+# Install Ruby gems
 bundle install
+
+# Install JavaScript dependencies (redundant with preDeploy, but ensures it runs here too)
+yarn install
+
+# Precompile assets
 bundle exec rails assets:precompile
-bundle exec rails assests:clean
+
+# Optional: Uncomment if you need to clean old assets, but typically not needed in build
+# bundle exec rails assets:clean

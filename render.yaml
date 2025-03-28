@@ -1,4 +1,4 @@
-# Final render.yaml for Git
+# render.yaml for my_basecamp_2 Rails app
 databases:
   - name: my_basecamp_db
     databaseName: basecamp
@@ -10,16 +10,26 @@ services:
     name: my_basecamp_2
     runtime: ruby
     plan: free
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec rails server"
+    buildCommand: "./bin/render-build.sh"  # Verify this exists; see below if not
+    startCommand: "bundle exec rails server -b 0.0.0.0 -p $PORT"
+    preBuild:
+      commands:
+        - apt-get update -y
+        - apt-get install -y nodejs
+    preDeploy:
+      commands:
+        - npm install -g yarn
+        - yarn install
     envVars:
       - key: DATABASE_URL
         fromDatabase:
           name: my_basecamp_db
           property: connectionString
       - key: RAILS_MASTER_KEY
-        sync: false- key: WEB_CONCURRENCY
-        value:
-    preBuild:
-      - apt-get update -y
-      - apt-get install -y nodejs
+        sync: false  # Set value in Render dashboard (e.g., 966dbd6cf25ba2c267edaf3fc1137dd1)
+      - key: NODE_VERSION
+        value: 16
+      - key: WEB_CONCURRENCY
+        value: 1  # Suitable for free tier
+      - key: RAILS_ENV
+        value: production
